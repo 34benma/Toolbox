@@ -2,5 +2,11 @@ language: java
 jdk:
   - oraclejdk7
 sudo: required
+branches:
+  only:
+    - building-with-travis
+notifications:
+  email:
+    - wantedonline@outlook.com
 script: mvn test
 install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
